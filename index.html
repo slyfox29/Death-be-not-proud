@@ -22,14 +22,14 @@
         }
 
         h1 {
-            font-size: 42px;
+            font-size: 48px; /* Larger title size */
             margin-bottom: 20px;
             font-family: 'Times New Roman', Times, serif;
             width: 100%;
         }
 
         p {
-            font-size: 20px;
+            font-size: 24px; /* Default text size */
             margin: 10px 0;
             font-family: 'Times New Roman', Times, serif;
             opacity: 0;
@@ -43,7 +43,7 @@
             font-style: italic;
             margin-top: 30px;
             font-family: 'Roboto Slab', serif;
-            font-size: 20px;
+            font-size: 24px; /* Default author text size */
             opacity: 0;
             transform: translateY(50px);
             animation: fadeInUp 1s ease-out forwards;
@@ -58,37 +58,45 @@
             }
         }
 
-        @media (min-width: 768px) {
-            body {
-                padding: 40px 80px;
-            }
-
+        /* Adjustments for smaller screens */
+        @media (max-width: 768px) {
             h1 {
-                font-size: 36px;
+                font-size: 36px; /* Smaller title for smaller screens */
             }
 
             p, .author {
-                font-size: 22px;
+                font-size: 20px; /* Smaller text for smaller screens */
             }
         }
 
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px; /* Even smaller title for very small screens */
+            }
+
+            p, .author {
+                font-size: 18px; /* Even smaller text for very small screens */
+            }
+        }
+
+        /* Larger screens */
         @media (min-width: 1024px) {
             body {
                 padding: 60px 120px;
             }
 
             h1 {
-                font-size: 40px;
+                font-size: 56px; /* Larger title for desktops */
             }
 
             p, .author {
-                font-size: 24px;
+                font-size: 28px; /* Larger text for desktops */
             }
         }
     </style>
 </head>
 <body>
-    <h1><strong>Death, Be Not Proud</strong></h1>
+    <h1>Death, Be Not Proud</h1>
     <p style="--i: 1;">Death, be not proud, though some have called thee</p>
     <p style="--i: 2;">Mighty and dreadful, for thou art not so;</p>
     <p style="--i: 3;">For those whom thou think'st thou dost overthrow</p>
